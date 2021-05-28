@@ -1,0 +1,53 @@
+%\documentclass[a4paper,12pt]{report}
+\documentclass[a4paper,12pt]{ctexrep}
+
+%\usepackage[fontset=windows]{ctex}
+%\usepackage{ctex}
+
+\linespread{1.5}%
+
+\usepackage{geometry}
+\geometry{a4paper,scale=0.75}
+
+\usepackage[center]{titlesec}
+\titleformat{\part}{\centering\Huge\bfseries}{}{1em}{}
+\titleformat{\chapter}{\centering\Large\bfseries}{}{1em}{}
+\titleformat{\section}{\large\bfseries}{\thesection、}{1em}{}
+%\titleformat{\subsection}{\bfseries}{(\thesubsection)}{1em}{}
+
+\usepackage{CJKulem}
+
+\usepackage[dvipsnames]{xcolor}
+% \usepackage{color}
+
+\newcommand{\cl}[1]{\textcolor{magenta}{#1}}
+\newcommand{\hl}[1]{{\colorbox{orange!30}{#1}}}
+
+
+\usepackage[colorlinks,linkcolor=magenta]{hyperref}
+
+\usepackage{enumitem}
+\AddEnumerateCounter{\chinese}{\chinese}{}
+
+\usepackage{zhnumber} % change section number to chinese
+\renewcommand\thesection{\zhnum{section}}
+\renewcommand\thesubsection{\zhnum{subsection}}
+
+\renewcommand{\thefootnote}{}
+%\footnotetext{Footnotetext without footnote mark}
+
+
+\begin{document}
+
+\title{\Huge \bf 文件汇编}
+\author{\kaishu liuxu}
+\date{\small \kaishu \today}
+
+\maketitle
+
+\tableofcontents
+
+\part{2021}
+\input{src/202105-bigdata.tex}
+
+\end{document}
